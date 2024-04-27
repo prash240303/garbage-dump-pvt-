@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .icon-container {
+
+        position: absolute;
+        left: 100px;
+        top: 100px;
+        width: 150px;
+        height: 150px;
+        outline: 2px solid #F2F2F5;
+        border-radius: 25px;
+        display: flex;
+        /* cursor: pointer; */
+        justify-content: center;
+        align-items: end;
+
+
+    }
+
+    .icon-container-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        /* padding: 20px; */
+    }
+
+    .display-icon {
+        /* flex: none; */
+        /* flex-grow: 1;
+        order: 0; */
+        display: inline-block;
+        background: #ffffff;
+        margin-bottom: 20px;
+        scale: 120%;
+
+    }
+
+    .icon-label-container {
+        /* flex: none; */
+        /* align-items: end; */
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 4px;
+        gap: 11px;
+        margin-bottom: 10px;
+
+        width: 130px;
+        height: 30px;
+        background: #E8F4FF;
+        border-radius: 15px;
+    }
+
+    .icon-name {
+        width: 71px;
+        height: 19px;
+        font-weight: 600;
+        font-size: 16px;
+        color: #1A91FF;
+
+        text-align: center;
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+
+
+    .download--btn {
+        /* Auto layout */
+        border: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding: 4px;
+        gap: 11px;
+
+        width: 100%;
+
+
+        background: #E8F4FF;
+
+        font-weight: 500;
+        font-size: 14px;
+
+        color: #1A91FF;
+
+    }
+
+    .download--btn img {
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        left: 12.5%;
+        right: 12.5%;
+        top: 12.5%;
+        bottom: 12.5%;
+        width: 18px;
+
+    }
+
+
+    /* .icon-name {
+        visibility: visible;
+    } */
+
+    .download--btn {
+        display: none;
+    }
+
+    .icon-label-container:hover>.icon-name {
+        display: none;
+
+    }
+
+    .icon-label-container:hover>.download--btn {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .input {
+        border: none;
+    }
+
+
+
+    .category {
+        position: absolute;
+        left: 200px;
+        top: 30px;
+        display: block;
+    }
+
+    .category input {
+        width: 200px;
+    }
+
+
+
+
+
+
+
+
+    @import url(https://fonts.googleapis.com/css?family=Lato:300,400,900);
+
+    /*  #292929: #292929;
+     #efefef: #efefef;
+     #D91E18: #D91E18;
+     #2ECC71: #2ECC71;
+     #4183D7: #4183D7;
+     "Lato", sans-serif;: "Lato", sans-serif;
+      40em: 40em; */
+
+    * {
+        box-sizing: border-box;
+    }
+
+
+
+    html {
+        /* background: #444; */
+    }
+
+
+    .container {
+        height: 100%;
+        min-height: 100%;
+        margin: 0 auto;
+    }
+
+    .button-wrap {
+        position: relative;
+        text-align: center;
+        top: 50%;
+
+
+        @media (max-width: 40em) {
+            margin-top: -1.5em;
+        }
+    }
+
+    .button-label {
+        display: inline-block;
+        padding: 1em 2em;
+        margin: 0.5em;
+        cursor: pointer;
+        color: #292929;
+        border-radius: 0.25em;
+        background: #efefef;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.22);
+        transition: 0.3s;
+        user-select: none;
+
+
+        @media (max-width: 40em) {
+            padding: 0em 1em 3px;
+            margin: 0.25em;
+        }
+    }
+
+    .button-label h1 {
+        font-size: 1em;
+        font-family: "Lato", sans-serif;
+    }
+
+    .button-label:hover {
+        background: #292929;
+        color: #292929;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.32);
+    }
+
+    .button-label:active {
+        transform: translateY(2px);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0px -1px 0 rgba(0, 0, 0, 0.22);
+    }
+
+    #yes-button:checked+.button-label {
+        background: #2ECC71;
+        color: #efefef;
+
+
+    }
+
+    #yes-button:checked+.button-label :hover {
+        background: #292929(#2ECC71, 5%);
+        color: #292929(#efefef, 5%);
+    }
+
+
+    #no-button:checked+.button-label {
+        background: #D91E18;
+        color: #efefef;
+    }
+
+    #no-button:checked+.button-label:hover {
+        color: #292929(#efefef, 5%);
+    }
+
+    #maybe-button:checked+.button-label {
+        background: #4183D7;
+        color: #efefef;
+
+    }
+
+    #maybe-button:checked+.button-label hover {
+        background: #292929(#4183D7, 5%);
+        color: #292929(#efefef, 5%);
+    }
+
+    .hidden {
+        display: none;
+    }
+
+
+
+
+
+
+
+
+
+    /*  code xyz */
+
+    .switch-field {
+        display: flex;
+        overflow: hidden;
+        left: 200px;
+        top: 200px;
+        position: absolute;
+        border-radius: 35px;
+        border: 3px solid #f1f1f1;
+        box-sizing: border-box;
+        align-items: center;
+        /* justify-content: center; */
+
+    }
+
+    .switch-field input {
+        position: absolute !important;
+        clip: rect(0, 0, 0, 0);
+        overflow: hidden;
+        text-align: center;
+
+    }
+
+    .switch-field label {
+
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 16px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        padding: 12px 30px;
+        transition: 0.5s ease-in;
+        margin: 4px;
+    }
+
+    .switch-field label img {
+        width: 20px;
+    }
+
+    .switch-field label:hover {
+        cursor: pointer;
+    }
+
+    .switch-field input:checked+label {
+        background-color: #E9F5FF;
+        box-shadow: none;
+        /* padding: 7px 20px;*/
+        color: #1E92FF;
+
+        display: flex;
+        align-items: center;
+        /* margin: 2px; */
+        border-radius: 25px;
+    }
+
+    .switch-field label:first-of-type {
+        border-radius: 4px 0 0 4px;
+    }
+
+    .switch-field label:last-of-type {
+        border-radius: 0 4px 4px 0;
+    }
+</style>
+
+
+<body>
+    <!-- <div class="icon-container">
+
+        <div class="icon-container-inner">
+            <img src="./Icon.svg" alt="" class="display-icon" />
+
+            <div class="icon-label-container">
+                <div class="icon-name">icon</div>
+                <button class="download--btn">
+                    <img src="./Icon.svg" alt=""> download</button>
+            </div>
+        </div>
+
+    </div> -->
+    <!-- 
+    <label for="name">search</label>
+    <input type="text" name="abc" id=" " class="input"> -->
+
+
+    <!-- 
+    <select class="category">
+
+        <option value="All">All</option>
+        <option value="Medical">Medical</option>
+        <option value="School">School</option>
+    </select> -->
+
+
+    <!-- <div class="category">
+        <input type="radio" name="abc">
+        <label for="abc">school</label>
+        <input type="radio" name="abc">
+        <label for="abc">Mediacl</label>
+        <input type="radio" name="abc">
+        <label for="abc">Office</label>
+    </div> -->
+
+    <!-- <div class="container"></div>
+    <div class="button-wrap"></div>
+    <input type="radio" name="accept-offers" id="yes-button" class="hidden radio-label" checked>
+    <label for="yes-button" class="button-label">
+        Yes </label>
+    <input type="radio" name="accept-offers" id="no-button" class="hidden radio-label">
+    <label for="no-button" class="button-label">
+        No</label>
+    <input type="radio" name="accept-offers" id="maybe-button" class="hidden radio-label">
+    <label for="maybe-button" class="button-label">
+        Maybe</label> -->
+
+
+
+
+    <div class="switch-field">
+
+        <input type="radio" id="radio-three" name="switch" value="yes" checked />
+        <label for="radio-three">
+            <img src="Icon.svg" alt="">
+            18 px </label>
+        <input type="radio" id="radio-four" name="switch" value="maybe" />
+        <label for="radio-four"><img src="Icon.svg" alt="">
+            24 px</label>
+        <input type="radio" id="radio-five" name="switch" value="no" />
+        <label for="radio-five"><img src="Icon.svg" alt="">
+            32 px</label>
+
+    </div>
+
+</body>
+
+</html>

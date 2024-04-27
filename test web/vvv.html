@@ -1,0 +1,62 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .my-select-menu::part(button) {
+      color: white;
+      background-color: #f00;
+      padding: 5px;
+      border-radius: 5px;
+    }
+  
+    .my-select-menu::part(listbox) {
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid red;
+      border-radius: 5px;
+    }
+  </style>
+<style>
+    .my-custom-select [slot='button'] {
+      display: flex;
+      align-content: center;
+    }
+    .my-custom-select button {
+      padding: 5px;
+      border: none;
+      background: #f06;
+      border-radius: 5px 0 0 5px;
+      color: white;
+      font-weight: bold;
+    }
+    .my-custom-select .label {
+      padding: 5px;
+      border: 1px solid #f06;
+      border-radius: 0 5px 5px 0;
+    }
+  </style>
+<body>
+    <select class="my-select-menu">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+      </select>
+      <selectmenu class="my-custom-select">
+        <div slot="button">
+          <button behavior="button">Open</button>
+          <span class="label">Choose an option</span>
+        </div>
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+      </selectmenu>
+    
+</body>
+</html>

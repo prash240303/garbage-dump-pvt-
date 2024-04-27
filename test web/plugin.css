@@ -1,0 +1,521 @@
+.main {
+  align-items: center;
+  width: 262px;
+  /* outline: 2px solid #1f17ff; */
+  height: 328px;
+  box-sizing: border-box;
+  background-color: #1c1c1c;
+  /* background-image: url("./sky.png"); */
+  background-repeat: no-repeat;
+  background-size: 500px;
+
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glass-container {
+  /* Auto layout */
+  align-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  /* gap: 23px; */
+
+  width: 230px;
+  height: 296px;
+  background: rgba(255, 255, 255, 0.1);
+  /* Style */
+
+  box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.05),
+    inset 0px -1px 1px rgba(255, 255, 255, 0.1),
+    inset 0px 1px 1px rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(50px);
+  /* Note: backdrop-filter has minimal browser support */
+  box-sizing: border-box;
+  border-radius: 24px;
+}
+
+.contents-group {
+  width: 198px;
+  /* height: 176px; */
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* linear mesh toggle */
+
+.toggle-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+  box-sizing: border-box;
+  width: 198px;
+  height: 46px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 6.74428px 5.05821px rgba(0, 0, 0, 0.05),
+    inset 0px -0.843035px 0.843035px rgba(255, 255, 255, 0.1),
+    inset 0px 0.843035px 0.843035px rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(42.1518px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 32px;
+
+}
+
+.toggle {
+  display: flex;
+  cursor: pointer;
+  flex-direction: row;
+  justify-content: center;
+  /* padding-right: 20px; */
+  align-items: center;
+  padding-top: 6px;  
+
+  padding-bottom: 6px;
+  width: 91px;
+  /* border: 2px solid red; */
+  height: 34px;
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 32px;
+  transition: all 1s ease-in-out ;
+}
+
+/* use this when the particular toggle (bw mesh and linear is selected for the non selected element) */
+.toggle-inactive {
+  
+  display: flex;
+  cursor: pointer;
+  flex-direction: row;
+  justify-content: center;
+  /* padding-right: 20px; */
+  align-items: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 91px;
+  /* border: 2px solid red; */
+  height: 34px;
+  border-radius: 32px;
+  cursor: pointer;
+  /* border: blue 2px solid; */
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.toggle :hover {
+  border: 2px solid red;
+}
+
+.toggle-label {
+  font-style: normal;
+  font-weight: 500;
+  /* identical to box height, or 183% */
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -0.202328px;
+}
+/* end */
+
+
+
+
+
+
+
+
+
+
+
+#meshMenu {
+  width: 198px;
+  height: 106px;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  display: none;
+  /* box-sizing: border-box; */
+  flex-direction: column;
+}
+
+/* bgtoggle */
+
+.bg-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  width: 198px;
+  height: 50px;
+}
+
+.bglabel-title {
+  width: 70px;
+  height: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.bg-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 8px;
+  gap: 16px;
+
+  width: 198px;
+  height: 24px;
+}
+.bglabel {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/* toggle*/
+.slider.round {
+  border-radius: 24px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2.5px;
+  top: 2.3px;
+  background-color: rgb(255, 255, 255);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+input:checked + .slider {
+  background-color: rgba(8, 8, 8, 1);
+  outline: 1px solid white;
+}
+
+input:checked + .slider::before {
+  background: rgb(255, 255, 255);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(25px);
+  -ms-transform: translateX(25px);
+  transform: translateX(25px);
+}
+
+.slider.round {
+  border-radius: 50px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switch-label {
+  line-height: 24px;
+}
+
+.switch-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* bg checkbox end */
+
+/* opacity */
+.opacity-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  width: 198px;
+  height: 32px;
+}
+
+.noiselabel {
+  width: 130px;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+/* range styling  */
+/* for range input */
+input[type="range"] {
+  height: 8px;
+  appearance: none;
+  margin: 10px 0;
+  background-color: transparent;
+  width: 100%;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0px 0px 0px #1f17ff;
+  background: rgba(235, 235, 245, 0.3);
+  border-radius: 7px;
+  border: 1px solid rgba(235, 235, 245, 0.3);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(67.955px);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #ff9e3d;
+  border: 0px solid #2497e3;
+  height: 16px;
+  width: 16px;
+  border-radius: 19px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -2.5px;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: rgba(235, 235, 245, 0.1);
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0px 0px 0px #1f17ff;
+  background: #969696;
+  border-radius: 7px;
+  border: 1px solid #d117ff;
+}
+
+input[type="range"]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #ff9e3d;
+  border: 0px solid #2497e3;
+  height: 12px;
+  width: 12px;
+  border-radius: 19px;
+  background: #969696;
+  cursor: pointer;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background: #1c1c1c;
+  border: 1px solid #d117ff;
+  border-radius: 14px;
+  box-shadow: 0px 0px 0px #1f17ff;
+}
+
+input[type="range"]::-ms-fill-upper {
+  background: rgba(235, 235, 245, 0.3);
+  border: 1px solid #d117ff;
+  border-radius: 14px;
+  box-shadow: 0px 0px 0px #1f17ff;
+}
+
+input[type="range"]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 0px #ff9e3d;
+  border: 0px solid #2497e3;
+  height: 12px;
+  width: 12px;
+  border-radius: 19px;
+  background: rgba(235, 235, 245, 0.3);
+  cursor: pointer;
+}
+
+input[type="range"]:focus::-ms-fill-lower {
+  background: #1c1c1c;
+}
+
+input[type="range"]:focus::-ms-fill-upper {
+  background: #1c1c1c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* linear menu */
+
+
+
+#linearMenu {
+  width: 198px;
+  height: 148px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.select-menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  width: 198px;
+  height: 56px;
+}
+.select-menu-label {
+  width: 130px;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+#palette {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 10px;
+  width: 198px;
+  height: 30px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 6.74428px 5.05821px rgba(0, 0, 0, 0.05),
+    inset 0px -0.843035px 0.843035px rgba(255, 255, 255, 0.1),
+    inset 0px 0.843035px 0.843035px rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(42.1518px);
+  border-radius: 44.6998px;
+}
+
+#palette:focus{
+  border:none;
+
+}
+
+
+
+#palette > option {
+  width: 20px;
+  padding: 20px;
+  color: black;
+}
+
+.angle-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  width: 198px;
+  height: 32px;
+}
+.Anglelabel {
+  width: 130px;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  width: 191px;
+  height: 30px;
+}
+
+.button {
+  display: inline-block;
+  border: 0;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 2.66346px 3.32933px rgba(0, 0, 0, 0.05),
+    inset 0px -0.110978px 0.110978px rgba(255, 255, 255, 0.25),
+    inset 0px 0.110978px 0.110978px rgba(255, 255, 255, 0.25);
+  height: 34px;
+  border-radius: 55.4888px;
+  padding: 6px 26px;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 55.4888px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}

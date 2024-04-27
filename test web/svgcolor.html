@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .logo {
+            width: 200px;
+        }
+
+        .logo path {
+            fill: greenyellow;
+        }
+
+        /* Select the path with class "logo" and set its fill color to red */
+        .logodiv:hover+.logo {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logodiv">
+        <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" />
+        </svg>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Check whether the Checkbox is checked or not</title>
+</head>
+
+<style>
+    #meshGradientInput {
+        display: none;
+    }
+</style>
+
+<body>
+    <h2>Check whether the Checkbox is checked or not using <i>.checked attribute</i></h2>
+    <h4>Check the below checkbox to see the text div</h4>
+    <input type="checkbox" id="checkbox">
+    <div id="meshGradientInput">
+        <input type="checkbox" id="darkbg" value="dark">
+        <label for="darkbg">Dark Background</label>
+    </div>
+
+    <div id="text"></div>
+    <script>
+        let checkbox = document.getElementById("checkbox");
+        let meshGradientInput = document.getElementById("meshGradientInput");
+
+        checkbox.addEventListener("change", () => {
+            if (checkbox.checked) {
+                meshGradientInput.style.display = "flex";
+            } else {
+                meshGradientInput.style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>

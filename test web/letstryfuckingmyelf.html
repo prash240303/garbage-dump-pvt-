@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<link rel="stylesheet" href="plugin.css">
+
+<body>
+
+    <div class="main">
+
+        <div class="glass-container">
+            <div class="contents-group">
+                <div class="toggle-container">
+                    <div id="ToggleLin" class="toggle">
+                        Linear
+                    </div>
+                    <div id="ToggleMesh" class="toggle-inactive">
+                        Mesh
+                    </div>
+
+                </div>
+
+                <div id="meshMenu">
+                    <div class="bg-container">
+                        <div class="bglabel-title">Background</div>
+                        <div class="bg-div">
+                            <span class="bglabel">Light</span>
+                            <label class="switch" for="darkbg">
+                                <input type="checkbox" id="darkbg" value="dark">
+                                <span class="slider round"></span>
+                            </label>
+                            <span class="bglabel">Dark</span>
+                        </div>
+                    </div>
+                    <div class="opacity-container">
+                        <div class="noiselabel">Noise Opacity</div>
+                        <input type="range" name="noise" id="noise" class="noise-inputfeild" min="0" max="100">
+                    </div>
+                </div>
+
+                <div id="linearMenu">
+                    <div class="select-menu-container">
+                        <div class="select-menu-label">select color palette</div>
+                        <select id="palette">
+                            <option id="pastel" value="1">Pastel Colors </option>
+                            <option  id="neon" value="2">Neon colors</option>
+                            <option id="cold" value="3">Cold colors </option>
+                            <option id="warm" value="4">Warm colors</option>
+                        </select>
+                    </div>
+                    <div class="angle-container">
+                        <div class="Anglelabel">Angle</div>
+                        <input type="range" name="angle" id="angle" class="angle-inputfeild" min="0" max="360">
+                    </div>
+                    <div class="opacity-container">
+                        <div class="noiselabel">Noise Opacity</div>
+                        <input type="range" name="noise" id="noise" class="noise-inputfeild" min="0" max="100">
+                    </div>
+                </div>
+            </div>
+            <div class="buttons-container">
+                <button id="create" class="button ">Create</button>
+                <button id="cancel" class="button ">Cancel</button>
+            </div>
+        </div>
+
+
+        
+        <script>
+        
+            const meshSel = document.getElementById("ToggleMesh");
+            const linsel = document.getElementById("ToggleLin");
+
+            let Mesh; let Lin;
+            meshSel.onclick = () => {
+                meshMenu.style.display = "flex";
+                linearMenu.style.display = "none";
+                Mesh = true; Lin = false;
+                linsel.classList.remove("toggle")
+                linsel.classList.add("toggle-inactive")
+                meshSel.classList.add("toggle")
+                meshSel.classList.remove("toggle-inactive")
+            }
+
+            linsel.onclick = () => {
+                linearMenu.style.display = "flex";
+                meshMenu.style.display = "none";
+                Mesh = false; Lin = true;
+                meshSel.classList.remove("toggle")
+                meshSel.classList.add("toggle-inactive")
+                linsel.classList.add("toggle")
+                linsel.classList.remove("toggle-inactive")
+            }
+
+
+        </script>
+</body>
+
+</html>

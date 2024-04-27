@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .element {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  position: absolute;
+}
+
+    </style>
+</head>
+<body>
+    <div class="element"></div>
+<script>
+    var element = document.querySelector('.element');
+
+document.addEventListener('mousemove', function(event) {
+  var mouseX = event.clientX;
+  var mouseY = event.clientY;
+
+  // Update element's position based on mouse movements
+  element.style.left = mouseX*0.1 + 100+ 'px';
+  element.style.top = mouseY*0.1 + 100+'px';
+});
+
+</script>
+</body>
+</html>

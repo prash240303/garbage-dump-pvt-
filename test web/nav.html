@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      padding: 16px;
+    }
+
+    .Nav-main-container {
+      display: flex;
+      -moz-box-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .Logo-container {
+      -moz-box-pack: start;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .nav-menu {
+      flex: 1 1 0%;
+      /* width: 40%; */
+      display: flex;
+      flex-direction: row;
+      -moz-box-pack: center;
+      justify-content: center;
+      align-items: center;
+      -moz-box-align: center;
+      gap: 20px;
+      opacity: 1;
+      }
+    .nav-menu-items {
+        padding: 10px 16px;
+      list-style-type: none;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 10px;
+      color: black;
+    transition:   background 0.5s cubic-bezier(0, 0, 0.2, 1)
+    }
+
+    .nav-menu-items a {
+      color: black;
+      text-decoration: none;
+    }
+    .nav-menu-items:hover {
+      background: #e4f9ff;
+      text-decoration: none;
+      color: black;
+      
+       }
+
+    .nav-menu-items:link {
+      color: black;
+    }
+
+    .nav-right
+    {
+        font-weight: 500;
+        color: #707070;
+    }
+    .nav-right a 
+    {
+        text-decoration: none;
+    }
+
+  </style>
+
+  <body>
+    <div class="Nav-main-container">
+      <div class="Logo-container">
+        <img src="/Iconify.svg" alt="" className="Logo" />
+      </div>
+
+      <ul class="nav-menu">
+        <li class="nav-menu-items"><a href="">Icons</a></li>
+        <li class="nav-menu-items"><a href="">Documentation</a></li>
+        <li class="nav-menu-items"><a href="">connect with me</a></li>
+      </ul>
+
+      <div class="nav-right">
+        share with love on <a href="twitter.com">Twitter</a>
+      </div>
+    </div>
+  </body>
+</html>

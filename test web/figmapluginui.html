@@ -1,0 +1,312 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=SF+Pro Text&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=SF+Pro Display&display=swap" rel="stylesheet">
+
+    <style>
+        
+        /* .107_95 {
+            overflow: hidden;
+        } */
+
+        .black_bg {
+            background-color: rgba(26.56, 26.56, 26.56, 1);
+            width: 249px;
+            height: 264.6482849121094px;
+            position: absolute;
+        }
+
+        .glass-container {
+            box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.05);
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 229px;
+            height:245px;
+            position: absolute;
+            left: 10px;backdrop-filter: blur(10px);
+            top: 10px;
+            border-radius:24px;
+        }
+
+        .Toggle-container {
+            box-shadow: 0px 6.744px 5.05px rgba(0, 0, 0, 0.05);
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 194.79998779296875px;
+            height: 40px;
+            position: absolute;
+            left: 17.1px;
+            top: 10px;
+            border-radius: 84.30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+        }
+
+        .Linear-tab {
+            background-color: rgba(255, 255, 255, 0.3);
+            width:100px;
+            height: 28px;
+            position: absolute;
+            left: 8px;
+            top: 6px;
+            border-radius: 84.30px;
+           
+        }
+
+        .Linear-span {
+            color: rgba(255, 255, 255, 1);
+            position: absolute;
+            left: 29.699996948242188px;
+            
+            font-family: SF Pro Text;
+            text-align: left;
+            font-size: 10.11642074584961px;
+            letter-spacing: -0.20232844352722168;
+        }
+
+        .Mesh-tab {
+            width: 89.39999389648438px;
+            height: 24px;
+            position: absolute;
+            left: 97.39999389648438px;
+            top: 8px;
+            border-top-left-radius: 84.30px;
+            border-top-right-radius: 84.30px;
+            border-bottom-left-radius: 84.30px;
+            border-bottom-right-radius: 84.30px;
+        }
+
+        .Mesh-span {
+            color: rgba(255, 255, 255, 1);
+            width: 26px;
+            height: 12px;
+            position: absolute;
+            left: 31.699996948242188px;
+            top: 6px;
+            font-family: SF Pro Text;
+            text-align: left;
+            font-size: 10.11642074584961px;
+            letter-spacing: -0.20232844352722168;
+        }
+
+        .e107_123 {
+            width: 140px;
+            height: 44px;
+            position: absolute;
+            left: 44.5px;
+            top: 67px;
+        }
+
+        .e107_124 {
+            color: rgba(255, 255, 255, 1);
+            width: 70px;
+            height: 17px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            font-family: SF Pro Display;
+            text-align: center;
+            font-size: 14px;
+            letter-spacing: 0;
+        }
+
+        .e107_125 {
+            width: 140px;
+            height: 24px;
+            position: absolute;
+            left: 0px;
+            top: 20px;
+        }
+
+        .e107_126 {
+            color: rgba(255, 255, 255, 1);
+            width: 34px;
+            height: 19px;
+            position: absolute;
+            left: 0px;
+            top: 2.5px;
+            font-family: SF Pro Display;
+            text-align: center;
+            font-size: 16px;
+            letter-spacing: 0;
+        }
+
+        .e107_127 {
+            box-shadow: 0px 3.7477476596832275px 2.8108108043670654px rgba(0, 0, 0, 0.05);
+            transform: rotate(1.5308806722812968e-22deg);
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 50px;
+            height: 24px;
+            position: absolute;
+            left: 46px;
+            top: 0px;
+            border-top-left-radius: 45px;
+            border-top-right-radius: 45px;
+            border-bottom-left-radius: 45px;
+            border-bottom-right-radius: 45px;
+        }
+
+        .e107_128 {
+            transform: rotate(-7.062250076880254e-31deg);
+            background-color: rgba(255, 255, 255, 0.3);
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            left: 4px;
+            top: 3px;
+            border-top-left-radius: 45px;
+            border-top-right-radius: 45px;
+            border-bottom-left-radius: 45px;
+            border-bottom-right-radius: 45px;
+        }
+
+        .e107_129 {
+            color: rgba(255, 255, 255, 1);
+            width: 32px;
+            height: 19px;
+            position: absolute;
+            left: 108px;
+            top: 2.5px;
+            font-family: SF Pro Display;
+            text-align: center;
+            font-size: 16px;
+            letter-spacing: 0;
+        }
+
+        .e107_116 {
+            width: 193px;
+            height: 30px;
+            position: absolute;
+            left: 18px;
+            top: 204.44314575195312px;
+        }
+
+        .e107_117 {
+            box-shadow: 0px 2.66 3.33px rgba(0, 0, 0, 0.05);
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 92px;
+            height: 30px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            border-top-left-radius: 55px;
+            border-top-right-radius: 55px;
+            border-bottom-left-radius: 55px;
+            border-bottom-right-radius: 55px;
+        }
+
+        .ei107_117_105_260 {
+            color: rgba(255, 255, 255, 1);
+            width: 40px;
+            height: 16px;
+            position: absolute;
+            left: 26px;
+            top: 7px;
+            font-family: SF Pro Display;
+            text-align: left;
+            font-size: 13.317320823669434px;
+            letter-spacing: 0;
+        }
+
+        .e107_118 {
+            box-shadow: 0px 2.66 3.33px rgba(0, 0, 0, 0.05);
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 94px;
+            height: 30px;
+            position: absolute;
+            left: 99px;
+            top: 0px;
+            border-top-left-radius: 55px;
+            border-top-right-radius: 55px;
+            border-bottom-left-radius: 55px;
+            border-bottom-right-radius: 55px;
+        }
+
+        .ei107_118_105_270 {
+            color: rgba(255, 255, 255, 1);
+            width: 42px;
+            height: 16px;
+            position: absolute;
+            left: 26px;
+            top: 7px;
+            font-family: SF Pro Display;
+            text-align: left;
+            font-size: 12px;
+            letter-spacing: 0;
+        }
+
+        .e107_130 {
+            width: 140px;
+            height: 55px;
+            position: absolute;
+            left: 45px;
+            top: 128px;
+        }
+
+        .e107_131 {
+            color: rgba(255, 255, 255, 1);
+            width: 87px;
+            height: 17px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            font-family: SF Pro Display;
+            text-align: left;
+            font-size: 14px;
+            letter-spacing: 0;
+        }
+
+        .e107_132 {
+            box-shadow: 0px 3.3px 4px rgba(0, 0, 0, 0.05);
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 140px;
+            height: 31px;
+            position: absolute;
+            left: 0px;
+            top: 24px;
+            border-top-left-radius: 70px;
+            border-top-right-radius: 70px;
+            border-bottom-left-radius: 70px;
+            border-bottom-right-radius: 70px;
+        }
+
+      
+      #meshToggle{
+
+      }
+    </style>
+</head>
+
+<body>
+    <div class="black_bg">
+      <img src="image 6.png" alt="" width="800px" class="image">
+        <div class="glass-container">
+         <!-- top linear mesh toggle  -->
+            <div class="Toggle-container">
+                <div class="Linear-tab"><input type="radio" name="gradientType" value="mesh" id="meshToggle" checked/>  Linear</div>
+                <div class="Mesh-tab"><span class="Mesh-span">  Mesh </span></div>
+            </div>
+          
+          
+            <div class=e107_123><span class="e107_124">Background</span>
+                <div class=e107_125><span class="e107_126">Light</span>
+                    <div class=e107_127></div><span class="e107_129">Dark</span>
+                </div>
+            </div>
+            <div class=e107_116>
+                <div class=e107_117><span class="ei107_117_105_260">Create</span></div>
+                <div class=e107_118><span class="ei107_118_105_270">Cancel</span></div>
+            </div>
+            <div class=e107_130><span class="e107_131">Noise Opacity</span></div>
+        </div>
+    </div>
+</body>
+
+</html>

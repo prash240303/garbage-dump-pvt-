@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #folder {
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+      margin: 0 auto;
+    }
+    .front-folder{
+      width: 214px;
+      height: 63px;
+      border-radius: 0 0 30px 30px;
+      margin-top: 0;
+      position: absolute;
+      top: 26px;
+      left: 20px;
+    }
+
+    .folder-bottom{
+      height: 64px;
+      width: 214px;
+      background: #C655FE;
+      display: flex;
+      justify-content: center;
+      /* padding: 20px; */
+      align-items: center;
+      flex-direction: column;
+      border-radius: 0px 0px 30px 30px;
+    }
+
+    .folder-bottom-content{
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      padding: 20px;
+      width: 100%;
+      flex-direction: row;
+
+    }
+  </style>
+</head>
+<body>
+  <div id="folder">
+    <svg xmlns="http://www.w3.org/2000/svg" width="214" height="64" viewBox="0 0 214 64" fill="none">
+      <path d="M0 30C0 13.4315 13.4315 0 30 0H53.5H74.573C78.3244 0 82.0425 0.703591 85.5345 2.07428L101.716 8.42571C105.208 9.79641 108.926 10.5 112.677 10.5H184C200.569 10.5 214 23.9315 214 40.5V63.5H0V30Z" fill="#DFCCFB"/>
+    </svg>
+    <div class="front-folder">
+        <!-- <div class="file 1"></div>
+        <div class="file 2"></div>
+        <div class="file 3"></div> --
+        <svg xmlns="http://www.w3.org/2000/svg" width="187" height="45" viewBox="0 0 187 45" fill="none">
+          <g clip-path="url(#clip0_362_206)">
+            <path d="M6.83749 25.7586C6.54434 19.0444 6.39777 15.6873 7.59248 13.0657C8.64337 10.7598 10.3973 8.84566 12.6029 7.59778C15.1104 6.17914 18.4675 6.03256 25.1817 5.73941L68.7402 3.83761C75.4545 3.54446 78.8116 3.39788 81.4331 4.59259C83.7391 5.64349 85.6532 7.39743 86.9011 9.60304C88.3197 12.1105 88.4663 15.4676 88.7595 22.1818L89.8848 47.9573L7.96287 51.5341L6.83749 25.7586Z" fill="white"/>
+            <line x1="15.4331" y1="17.0095" x2="71.3798" y2="14.5668" stroke="#E1DBE5" stroke-width="3" stroke-linecap="round"/>
+            <line x1="15.8257" y1="26.0009" x2="56.7867" y2="24.2125" stroke="#E1DBE5" stroke-width="3" stroke-linecap="round"/>
+            <line x1="16.2183" y1="34.9924" x2="67.1698" y2="32.7678" stroke="#E1DBE5" stroke-width="3" stroke-linecap="round"/>
+            <line x1="16.5674" y1="42.9848" x2="67.5189" y2="40.7602" stroke="#E1DBE5" stroke-width="3" stroke-linecap="round"/>
+            <g filter="url(#filter0_d_362_206)">
+              <path d="M56.2781 24.703C56.6883 17.9949 56.8935 14.6409 58.3557 12.1586C59.6419 9.97506 61.5863 8.25479 63.9102 7.2443C66.5522 6.09552 69.9063 6.30067 76.6144 6.71095L120.133 9.37267C126.841 9.78295 130.195 9.98809 132.678 11.4503C134.861 12.7365 136.581 14.6809 137.592 17.0048C138.741 19.6468 138.535 23.0009 138.125 29.709L136.55 55.4609L54.703 50.4549L56.2781 24.703Z" fill="white"/>
+            </g>
+            <line x1="66.1762" y1="16.5944" x2="122.072" y2="20.0131" stroke="#E1DBE5" stroke-width="3" stroke-linecap="round"/>
+            <line x1="65.6269" y1="25.5775" x2="106.55" y2="28.0805" stroke="#E1DBE5" stroke-width="3" stroke-linecap="round"/>
+            <line x1="65.0775" y1="34.5607" x2="115.982" y2="37.6742" stroke="#E1DBE5" stroke-width="3" stroke-linecap="round"/>
+            <line x1="64.5888" y1="42.5458" x2="115.494" y2="45.6593" stroke="#E1DBE5" stroke-width="3" stroke-linecap="round"/>
+            <g filter="url(#filter1_d_362_206)">
+              <path d="M100 19.2C100 12.4794 100 9.11905 101.308 6.55211C102.458 4.29417 104.294 2.4584 106.552 1.30792C109.119 0 112.479 0 119.2 0H162.8C169.521 0 172.881 0 175.448 1.30792C177.706 2.4584 179.542 4.29417 180.692 6.55211C182 9.11905 182 12.4794 182 19.2V45H100V19.2Z" fill="white"/>
+            </g>
+            <line x1="110.5" y1="11.5" x2="166.5" y2="11.5" stroke="#E1DBE5" stroke-width="3" stroke-linecap="round"/>
+            <line x1="110.5" y1="20.5" x2="151.5" y2="20.5" stroke="#E1DBE5" stroke-width="3" stroke-linecap="round"/>
+            <line x1="110.5" y1="29.5" x2="161.5" y2="29.5" stroke="#E1DBE5" stroke-width="3" stroke-linecap="round"/>
+            <line x1="110.5" y1="37.5" x2="161.5" y2="37.5" stroke="#E1DBE5" stroke-width="3" stroke-linecap="round"/>
+          </g>
+          <defs>
+            <filter id="filter0_d_362_206" x="50.7031" y="6.38623" width="91.7466" height="57.0747" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+              <feOffset dy="4"/>
+              <feGaussianBlur stdDeviation="2"/>
+              <feComposite in2="hardAlpha" operator="out"/>
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_362_206"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_362_206" result="shape"/>
+            </filter>
+            <filter id="filter1_d_362_206" x="96" y="0" width="90" height="53" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+              <feOffset dy="4"/>
+              <feGaussianBlur stdDeviation="2"/>
+              <feComposite in2="hardAlpha" operator="out"/>
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_362_206"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_362_206" result="shape"/>
+            </filter>
+            <clipPath id="clip0_362_206">
+              <rect width="187" height="45" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+
+    </div>
+    <div class="folder-bottom">
+      <div class="folder-bottom-content">
+        <div>Shared</div>
+        <div>&#x22C5; &#x22C5; &#x22C5;</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

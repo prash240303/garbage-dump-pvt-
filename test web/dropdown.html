@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Circular Button with Clickable Dropdown Menu</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .dropdown-container {
+    position: relative;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .dropdown-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    width: 100px;
+    display: none;
+    margin-top: 5px;
+    padding: 10px;
+  }
+  .dropdown-menu a {
+    display: block;
+    padding: 10px 0; 
+    text-decoration: none;
+    color: #333;
+  }
+  .dropdown-menu.active {
+    display: block;
+  }
+</style>
+</head>
+<body>
+  <div class="dropdown-container">
+    <div class="dropdown-button" onclick="toggleDropdown()">
+      <span>&#9776;</span>
+    </div>
+    <div class="dropdown-menu" id="dropdownMenu">
+      <a href="#">Option 1</a>
+      <a href="#">Option 2</a>
+      <a href="#">Option 3</a>
+      <a href="#">Option 4</a>
+      <a href="#">Option 5</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleDropdown() {
+      var dropdownMenu = document.getElementById("dropdownMenu");
+      dropdownMenu.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>

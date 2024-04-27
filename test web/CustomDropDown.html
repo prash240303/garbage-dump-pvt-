@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+
+    select {
+        font-size: 1rem;
+        padding: 0.7rem 5rem 0.7rem 1.5rem;
+        border: 2px solid rgb(144, 144, 144);
+        border-radius: 10px;
+        appearance: none;
+    }
+
+    .custom-select {
+        position: relative;
+    }
+
+    .custom-arrow {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        /* display: block; */
+        background: #114fec;
+        height: 100%;
+        width: 3em;
+        overflow: hidden;
+        box-sizing: border-box;
+        border: 2px solid rgb(113, 113, 113);
+
+        border-radius: 10px;
+        pointer-events: none;
+    }
+
+    .custom-arrow::before,
+    .custom-arrow::after {
+        --size: 0.3rem;
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .custom-arrow::before {
+        border-left: var(--size) solid transparent;
+        border-right: var(--size) solid transparent;
+        border-bottom: var(--size) solid rgba(255, 255, 255, 0.8);
+
+        top: 40%;
+    }
+
+    .custom-arrow::after {
+        border-left: var(--size) solid transparent;
+        border-right: var(--size) solid transparent;
+        border-top: var(--size) solid rgba(255, 255, 255, 0.8);
+        top: 60%;
+    }
+
+    /*style for custom select list*/
+    .custom-select select option {
+        background: #ffffff;
+        color: #3e5aa2;
+        /* border: 2px solid black;
+        
+        border-radius: 2px; */
+        font-size: 1rem;
+    }
+</style>
+
+<body>
+
+    <div class="custom-select">
+        <span class="custom-arrow"></span>
+        <select aria-placeholder="">
+            <option value="">Option 1</option>
+            <option value="">Option 2</option>
+            <option value="">Option 3</option>
+            <option value="">Option 4 </option>
+        </select>
+    </div>
+
+
+
+</body>
+
+</html>
